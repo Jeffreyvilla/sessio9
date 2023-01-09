@@ -1,0 +1,26 @@
+<div class="contenedor">
+  <h1>NÚMEROS</h1>
+  <div class="mb-3 valores">
+    <label for="valor1" class="form-label labelValor">Ingrese primer valor:</label>
+    <input type="number" class="form-control" id="valor1" [(ngModel)]="valor1">
+  </div>
+  <div class="mb-3 valores">
+    <label for="valor2" class="form-label labelValor">Ingrese segundo valor:</label>
+    <input type="number" class="form-control" id="valor2" [(ngModel)]="valor2">
+  </div>
+  <br>
+  <div class="mb-4">
+    <select (change)="onChange($event)" class="form-select" aria-label="Default select example">
+      <option selected>Elija una opción</option>
+      <option value="+">Sumar</option>
+      <option value="-">Restar</option>
+      <option value="*">Multiplicar</option>
+      <option value="/">Dividir</option>
+    </select>
+  </div>
+  <br>
+  <div class="resultado" [ngStyle]="{'color': this.getColor()}">
+    {{this.resultado}}
+  </div>
+
+</div>
